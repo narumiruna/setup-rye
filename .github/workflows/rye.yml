@@ -13,6 +13,6 @@ jobs:
     steps:
       - uses: narumiruna/setup-rye-action@main
         with:
-          rye-version: latest
+          version: latest
           cache: true
       - run: rye --version
