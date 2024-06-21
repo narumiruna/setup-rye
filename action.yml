@@ -13,6 +13,6 @@ runs:
         export RYE_VERSION=${{ inputs.rye-version }}
         curl -sSf https://rye.astral.sh/get | bash
         echo "$HOME/.rye/env" >> $GITHUB_PATH
-        source "$HOME/.rye/env"
-        rye --version
+        # source "$HOME/.rye/env"
+        # rye --version
       shell: bash
