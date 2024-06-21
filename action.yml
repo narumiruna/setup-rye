@@ -5,11 +5,11 @@ branding:
   color: 'black'
 inputs:
   rye-version:
-    description: 'Defaults to latest. Can be set to an explicit version to install a specific one.'
+    description: 'Specify a version to install, defaults to the latest version.'
     required: false
     default: 'latest'
   cache:
-    description: 'Cache uv. Defaults to false.'
+    description: 'Toggle caching of uv. Defaults to false.'
     required: false
     default: false
 runs:
