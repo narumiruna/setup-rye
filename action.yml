@@ -12,5 +12,6 @@ runs:
         export RYE_INSTALL_OPTION="--yes"
         export RYE_VERSION=${{ inputs.rye-version }}
         curl -sSf https://rye.astral.sh/get | bash
+        echo "$HOME/.rye/env" >> $GITHUB_PATH
         rye --version
       shell: bash
