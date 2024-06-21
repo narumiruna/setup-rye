@@ -10,7 +10,7 @@ runs:
   steps:
     - run: |
         ${GITHUB_ACTION_PATH}/run.sh
-        rye --version
+        # rye --version
         echo $HOME
         echo $PATH
         echo $GITHUB_PATH
