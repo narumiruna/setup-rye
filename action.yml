@@ -8,12 +8,7 @@ inputs:
 runs:
   using: 'composite'
   steps:
-    - run: |
-        ${GITHUB_ACTION_PATH}/run.sh
-        # rye --version
-        echo $HOME
-        echo $PATH
-        echo $GITHUB_PATH
+    - run: ${GITHUB_ACTION_PATH}/run.sh
       shell: bash
       env:
         RYE_INSTALL_OPTION: "--yes"
