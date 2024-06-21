@@ -1,0 +1,14 @@
+name: 'Setup Rye'
+description: 'An action to setup Rye'
+inputs:
+  rye-version:
+    description: 'Defaults to latest. Can be set to an explicit version to install a specific one.'
+    required: false
+    default: 'latest'
+runs:
+  using: 'composite'
+  steps:
+    - run: |
+        export RYE_VERSION=${{ inputs.rye-version }}
+        curl -sSf https://rye.astral.sh/get | bash
+      shell: bash
