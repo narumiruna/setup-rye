@@ -16,6 +16,7 @@ runs:
         rye --version
         echo $HOME
         echo $PATH
+        echo $GITHUB_PATH
       shell: bash
       env:
         RYE_INSTALL_OPTION: "--yes"
