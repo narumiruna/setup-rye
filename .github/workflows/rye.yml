@@ -1,4 +1,4 @@
-name: Python
+name: Rye
 
 on:
   workflow_dispatch:
@@ -8,12 +8,8 @@ on:
     branches: ["main"]
 
 jobs:
-  python:
+  rye:
     runs-on: ubuntu-latest
-    strategy:
-      max-parallel: 1
-      matrix:
-        python-version: ["3.11"]
     steps:
       - uses: narumiruna/setup-rye-action@main
       - run: rye --version
