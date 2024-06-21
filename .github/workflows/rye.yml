@@ -15,4 +15,4 @@ jobs:
       matrix:
         python-version: ["3.11"]
     steps:
-      - uses: narumiruna/setup-rye-action
+      - uses: narumiruna/setup-rye-action@main
