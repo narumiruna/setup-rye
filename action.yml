@@ -1,5 +1,8 @@
 name: 'Setup Rye Action'
 description: 'An action to setup Rye'
+branding:
+  icon: 'package'
+  color: 'black'
 inputs:
   rye-version:
     description: 'Defaults to latest. Can be set to an explicit version to install a specific one.'
@@ -13,6 +16,3 @@ runs:
       env:
         RYE_INSTALL_OPTION: "--yes"
         RYE_VERSION: ${{ inputs.rye-version }}
-branding:
-  icon: 'package'
-  color: 'black'
