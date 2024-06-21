@@ -19,7 +19,7 @@ runs:
       if: ${{ inputs.cache }}
       with:
           path: ~/.cache/uv
-          key: ${{ runner.os }}-uv
+          key: ${{ runner.os }}-${{ hashFiles('**/requirements.lock', '**/requirements-dev.lock') }}-uv
     - run: ${GITHUB_ACTION_PATH}/run.sh
       shell: bash
       env:
