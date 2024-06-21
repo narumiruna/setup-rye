@@ -4,7 +4,7 @@ branding:
   icon: 'package'
   color: 'black'
 inputs:
-  rye-version:
+  version:
     description: 'Specify a version to install, defaults to the latest version.'
     required: false
     default: 'latest'
@@ -24,4 +24,4 @@ runs:
       shell: bash
       env:
         RYE_INSTALL_OPTION: "--yes"
-        RYE_VERSION: ${{ inputs.rye-version }}
+        RYE_VERSION: ${{ inputs.version }}
