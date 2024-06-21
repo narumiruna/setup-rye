@@ -9,10 +9,11 @@ runs:
   using: 'composite'
   steps:
     - run: |
-        export RYE_INSTALL_OPTION="--yes"
-        export RYE_VERSION=${{ inputs.rye-version }}
         curl -sSf https://rye.astral.sh/get | bash
         echo "$HOME/.rye/env" >> $GITHUB_PATH
-        # source "$HOME/.rye/env"
-        # rye --version
+        source "$HOME/.rye/env"
+        rye --version
       shell: bash
+      env:
+        RYE_INSTALL_OPTION: "--yes"
+        RYE_VERSION: ${{ inputs.rye-version }}
