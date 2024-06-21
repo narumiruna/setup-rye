@@ -1,4 +1,4 @@
-name: 'Install Rye'
+name: 'Setup Rye Action'
 description: 'An action to setup Rye'
 inputs:
   rye-version:
