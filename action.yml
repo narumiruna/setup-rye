@@ -13,3 +13,6 @@ runs:
       env:
         RYE_INSTALL_OPTION: "--yes"
         RYE_VERSION: ${{ inputs.rye-version }}
+branding:
+  icon: 'package'
+  color: 'black'
