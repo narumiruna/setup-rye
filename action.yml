@@ -9,6 +9,7 @@ runs:
   using: 'composite'
   steps:
     - run: |
+        export RYE_INSTALL_OPTION="--yes"
         export RYE_VERSION=${{ inputs.rye-version }}
         curl -sSf https://rye.astral.sh/get | bash
       shell: bash
