@@ -9,7 +9,7 @@ inputs:
     required: false
     default: 'latest'
   cache:
-    description: ''
+    description: 'Cache uv. Defaults to false.'
     required: false
     default: false
 runs:
