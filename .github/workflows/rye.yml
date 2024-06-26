@@ -16,4 +16,7 @@ jobs:
         with:
           rye-version: latest
           cache: true
-      - run: rye --version
+      - run: |
+          rye --version
+          rye init
+          rye sync
