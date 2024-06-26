@@ -1,27 +1,27 @@
-name: 'Setup Rye Action'
-description: 'An action to setup Rye'
+name: "Setup Rye Action"
+description: "An action to setup Rye"
 branding:
-  icon: 'package'
-  color: 'black'
+  icon: "package"
+  color: "black"
 inputs:
-  version:
-    description: 'Specify a version to install, defaults to the latest version.'
+  rye-version:
+    description: "Rye version"
     required: false
-    default: 'latest'
+    default: "latest"
   cache:
-    description: 'Toggle caching of uv. Defaults to false.'
+    description: "Cache uv"
     required: false
     default: false
 runs:
-  using: 'composite'
+  using: "composite"
   steps:
     - uses: actions/cache@v4
       if: ${{ inputs.cache }}
       with:
-          path: ~/.cache/uv
-          key: ${{ runner.os }}-${{ hashFiles('**/requirements*.lock') }}-uv
+        path: ~/.cache/uv
+        key: setup-rye-${{ runner.os }}-${{ hashFiles('**/requirements*.lock') }}-uv
     - run: ${GITHUB_ACTION_PATH}/run.sh
       shell: bash
       env:
         RYE_INSTALL_OPTION: "--yes"
-        RYE_VERSION: ${{ inputs.version }}
+        RYE_VERSION: ${{ inputs.rye-version }}

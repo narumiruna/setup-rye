@@ -2,7 +2,7 @@
 
 ```yml
 steps:
-  - uses: narumiruna/setup-rye-action@v1
+  - uses: narumiruna/setup-rye@v1
     with:
       version: latest
       cache: true

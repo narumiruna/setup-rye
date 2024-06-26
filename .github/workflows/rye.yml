@@ -11,8 +11,8 @@ jobs:
   rye:
     runs-on: ubuntu-latest
     steps:
-      - uses: narumiruna/setup-rye-action@main
+      - uses: ./
         with:
-          version: latest
+          rye-version: latest
           cache: true
       - run: rye --version
